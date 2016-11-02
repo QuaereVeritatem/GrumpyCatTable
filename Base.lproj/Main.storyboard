@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrumpyCatTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="XWV-Jf-ArZ">
+                                <frame key="frameInset" minY="20" width="320" height="460"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-Xn-Pfm">
+                                <frame key="frameInset" minX="20" minY="50" width="280" height="405"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="grumpyCatViewCell" id="7LD-WX-hSd" customClass="GrumpyCatViewCell" customModule="GrumpyCatTable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7LD-WX-hSd" id="3l8-WJ-km1">
+                                            <frame key="frameInset" width="280" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grumpy_no" translatesAutoresizingMaskIntoConstraints="NO" id="HCM-2N-11k">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="4G9-QT-E8P"/>
+                                                        <constraint firstAttribute="height" constant="60" id="LId-ij-Iql"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be1-jo-VVr" userLabel="Thing To Hate">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="be1-jo-VVr" firstAttribute="leading" secondItem="HCM-2N-11k" secondAttribute="trailing" constant="15" id="3V8-EX-UPj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="be1-jo-VVr" secondAttribute="trailing" constant="10" id="4tf-LP-FZE"/>
+                                                <constraint firstItem="HCM-2N-11k" firstAttribute="centerY" secondItem="3l8-WJ-km1" secondAttribute="centerY" id="Qen-ic-Rdi"/>
+                                                <constraint firstItem="be1-jo-VVr" firstAttribute="top" secondItem="3l8-WJ-km1" secondAttribute="topMargin" constant="3" id="YfG-c1-zG8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="be1-jo-VVr" secondAttribute="bottom" constant="4" id="ZBl-Xo-3sw"/>
+                                                <constraint firstItem="HCM-2N-11k" firstAttribute="leading" secondItem="3l8-WJ-km1" secondAttribute="leadingMargin" constant="10" id="bet-2k-x8H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="grumpyCat" destination="HCM-2N-11k" id="L9i-jv-6Qw"/>
+                                            <outlet property="thingToHate" destination="be1-jo-VVr" id="Uem-gB-2BK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qOg-Ni-UdY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="n1A-3U-34m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lfv-Xn-Pfm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="8IF-6G-5V2"/>
+                            <constraint firstItem="XWV-Jf-ArZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BKX-cQ-ELg"/>
+                            <constraint firstAttribute="trailing" secondItem="lfv-Xn-Pfm" secondAttribute="trailing" constant="20" id="GEX-ns-Gl3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lfv-Xn-Pfm" secondAttribute="bottom" constant="25" id="P56-b5-wUk"/>
+                            <constraint firstAttribute="trailing" secondItem="XWV-Jf-ArZ" secondAttribute="trailing" id="Pi9-P2-w3X"/>
+                            <constraint firstItem="XWV-Jf-ArZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qpd-22-fHL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XWV-Jf-ArZ" secondAttribute="bottom" id="vzo-kD-ZXD"/>
+                            <constraint firstItem="lfv-Xn-Pfm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wVZ-2k-SqF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="426"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="414" height="736"/>
+        <image name="grumpy_no" width="50" height="50"/>
+    </resources>
+</document>
